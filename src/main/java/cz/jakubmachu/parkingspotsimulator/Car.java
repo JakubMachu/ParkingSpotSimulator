@@ -1,3 +1,5 @@
+package cz.jakubmachu.parkingspotsimulator;
+
 public class Car {
     private String brand;
     private String color;
@@ -20,7 +22,6 @@ public class Car {
         private String color;
         private int licensePlate;
         private String nationality;
-
 
 
         public CarBuilder setBrand(String brand) {
@@ -50,6 +51,6 @@ public class Car {
 
     @Override
     public String toString() {
-        return String.format("%s %s with license plate number: %s - from: %s entered parking spot.", color ,brand, licensePlate, nationality);
+        return String.format("%s %s with license plate number: %s - from: %s entered parking spot.", color, brand, licensePlate, nationality);
     }
 }

@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package cz.jakubmachu.parkingspotsimulator;
+
 import java.util.Random;
 
 public class CarGenerator extends Thread {
@@ -15,6 +16,7 @@ public class CarGenerator extends Thread {
                 .setNationality(nationality[random.nextInt(nationality.length)])
                 .build();
     }
+
     @Override
     public void run() {
         while (true) {
