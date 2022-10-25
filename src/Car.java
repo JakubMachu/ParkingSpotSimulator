@@ -4,11 +4,11 @@ public class Car {
     private int licensePlate;
     private String nationality;
 
-    public Car(String brand, String color, String nationality, int licensePlate) {
+    public Car(String brand, String color, int licensePlate, String nationality) {
         this.brand = brand;
         this.color = color;
-        this.nationality = nationality;
         this.licensePlate = licensePlate;
+        this.nationality = nationality;
     }
 
     public static CarBuilder builder() {
@@ -18,8 +18,9 @@ public class Car {
     public static class CarBuilder {
         private String brand;
         private String color;
-        private String nationality;
         private int licensePlate;
+        private String nationality;
+
 
 
         public CarBuilder setBrand(String brand) {
@@ -38,11 +39,12 @@ public class Car {
         }
 
         public CarBuilder setNationality(String nationality) {
+            this.nationality = nationality;
             return this;
         }
 
         public Car build() {
-            return new Car(brand, color, nationality, licensePlate);
+            return new Car(brand, color, licensePlate, nationality);
         }
     }
 

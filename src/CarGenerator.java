@@ -15,8 +15,6 @@ public class CarGenerator extends Thread {
                 .setNationality(nationality[random.nextInt(nationality.length)])
                 .build();
     }
-
-
     @Override
     public void run() {
         while (true) {
