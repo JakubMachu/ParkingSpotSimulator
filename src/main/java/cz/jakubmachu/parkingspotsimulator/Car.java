@@ -17,6 +17,15 @@ public class Car {
         return new CarBuilder();
     }
 
+    public int getLicensePlate() {
+        return licensePlate;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s with license plate number: %s - from: %s entered parking spot.", color, brand, licensePlate, nationality);
+    }
+
     public static class CarBuilder {
         private String brand;
         private String color;
@@ -47,10 +56,5 @@ public class Car {
         public Car build() {
             return new Car(brand, color, licensePlate, nationality);
         }
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s %s with license plate number: %s - from: %s entered parking spot.", color, brand, licensePlate, nationality);
     }
 }
